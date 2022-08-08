@@ -161,7 +161,7 @@ select {
     border: none;
     font-weight: 400;
     min-width: 140px;
-    padding: 7px 7px;
+    padding: 5px 5px;
     border: 1px solid #707070;
     cursor: pointer;
 }
@@ -170,12 +170,16 @@ select {
     border: none;
     background-color: #62a72a;
     margin-right: 30px;
+    text-align: center;
 }
 
 .cancelButton {
     text-decoration: none;
     background-color: #c08415;
     text-align: center;
+    
+    
+
 }
 .resetButton {
     text-decoration: none;
