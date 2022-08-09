@@ -196,6 +196,15 @@ select {
     }
 }
 
+error-output{
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+    white-space: nowrap;
+}
+
+
 @media only screen and (max-width: 600px) {
     .form {
         margin-top: 10px;
