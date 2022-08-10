@@ -89,3 +89,14 @@ const getInputElementValue = (id) => {
   return value;
 }
 
+const resetForm = () => {
+  setValue('#name', '');
+  unsetSelectedValues('[name=profile]');
+  unsetSelectedValues('[name=gender]'); unsetSelectedValues('[name=department]');
+  setValue('#salary', '');
+  setTextValue('.salary-output','400000') 
+  setValue('#notes', '');
+  setValue('#day', '');
+  setValue('#month', '');
+  setValue('#year', '');
+}
