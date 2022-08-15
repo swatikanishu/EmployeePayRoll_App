@@ -42,11 +42,13 @@ const createInnerHtml = () => {
 
 const getDeptHtml = (deptList) => {
     let deptHtml = '';
-    for (const dept of deptList) {
-        deptHtml = `${deptHtml} <div class='dept-label'>${dept}</div>`
+    if (deptList){
+    for (let dept of deptList) {
+        deptHtml = `${deptHtml} <div class="dept-label">${dept}</div>`;
     }
-    return deptHtml;
 }
+    return deptHtml;
+};
 
 const remove = (node) => {
     let empPayrollData = empPayrollList.find(empData => empData._name == node.id);
