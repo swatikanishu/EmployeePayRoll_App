@@ -1,5 +1,5 @@
 
-class EmployeePayroll {
+class EmployeePayrollData{
     // getter and setter method 
 
     get name() {
@@ -11,11 +11,11 @@ class EmployeePayroll {
             this._name = name;
         else throw 'Name is Incorrect!';
     }
-    get profilePic() {
-        return this._profilePic;
+    get profilePicture() {
+        return this._profilePicture;
     }
-    set profilePic(profilePic) {
-        this._profilePic = profilePic;
+    set profilePicture(profilePicture) {
+        this._profilePicture = profilePicture;
     }
 
     get gender() {
@@ -46,6 +46,12 @@ class EmployeePayroll {
         return this._startDate;
     }
     set startDate(startDate) {
+        let now = new Date();
+        if (startDate > now) throw "Start Date is a Futute Date!"
+        let difference = Math.abs(now.getTime() - startDate.getTime());
+        if (difference / (1000 * 60 * 60 * 24) < 30) {
+            throw "Start Date is beyond 30 days!"
+        }
         this._startDate = startDate;
     }
     
