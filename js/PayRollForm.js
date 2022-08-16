@@ -28,13 +28,15 @@ window.addEventListener("DOMContentLoaded", () => {
                 let dateString = document.querySelector("#month").value + " " + document.querySelector("#day").value + ", " + document.querySelector("#year").value;
                 (new EmployeePayrollData).startDate = new Date(dateString);
                 setTextContent(".startDate-error", "");
-                document.querySelector(".submitButton").disabled = false;
-            } catch (error) {
+                document.querySelector(".submitButton").disabled = true;
+            }
+            catch (error) {
                 setTextContent(".startDate-error", error);
                 document.querySelector(".submitButton").disabled = true;
             }
         });
     }
+    
 
     const salary = document.querySelector("#salary");
     const output = document.querySelector(".salary-output");
